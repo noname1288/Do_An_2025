@@ -1,0 +1,142 @@
+.profile_component {
+    margin: 5rem 10rem;
+}
+
+.profile_main {
+    flex: .8;
+    border-radius: 1.2rem;
+    border: 1px solid #cccccc;
+    padding: 1rem 3rem;
+    padding-top: 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.profile_main h2 {
+    margin-bottom: 2rem;
+    color: rgba(255, 130, 40, .8);
+}
+
+.profile_edit {
+    flex: .3;
+    margin-right: 5rem;
+}
+
+.profile_avatar {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: contain;
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+}
+
+.profile_change_avatar  {
+    margin: 0 auto;
+    font-style: italic;
+    color: rgba(255, 130, 40, .8)
+}
+
+.profile_change_dob {
+    padding-right: 1rem;
+}
+
+.profile_change_password {
+    width: 100%;
+    height: 2.5rem;
+    margin-top: 1rem;
+    color: rgb(255, 130, 40);
+    border: 1px solid rgba(255, 130, 40, .8);
+}
+
+.profile_change_password:hover {
+    color: #ffffff;
+    background-color: rgba(255, 130, 40, .8);
+}
+
+.profile_info {
+    flex: 1;
+}
+
+.profile_info_detail {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.profile_info_title {
+    float: left;
+    margin-bottom: .3rem;
+}
+
+.profile_info_form {
+    width: 100%;
+    height: 2.2rem;
+    border-radius: .2rem;
+    border: 1px solid #d9d9d9;
+    background-color: #ffffff;
+}
+
+.profile_icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    object-fit: contain;
+    margin: 0 .5rem;
+}
+
+.profile_info_form input {
+    border: none;
+    width: inherit;
+    height: 1.8rem;
+    border-radius: 0px;
+    border-left: 1px solid #d9d9d9;
+}
+
+.btn_delete {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 0px;
+}
+
+.profile_icon_delete {
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain;
+}
+
+.profile_info_detail:first-of-type {
+    flex: .75;
+}
+
+.profile_edit_gender {
+    flex: .25;
+    margin-left: 2rem;
+}
+
+.profile_choose_gender {
+    width: 100%;
+    height: 2.2rem;
+    border-radius: 1rem;
+    justify-content: space-between;
+    border: 1px solid #d9d9d9;
+}
+
+.profile_gender {
+    width: 50%;
+    border-radius: inherit;
+    height: calc(100% - 2px);
+}
+
+.profile_change_dob_field {
+  display: flex;
+  align-items: center;
+}
+
+
+.active {
+    color: #ffffff;
+    background-color: rgba(255, 130, 40, .8);
+}
+
+.hidden {
+    display: none;
+}

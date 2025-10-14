@@ -1,0 +1,86 @@
+<ng-template #hidden>
+    <div class="management_payment_details_false space_between">
+        <h3>2. Dọn dẹp vệ sinh:</h3>
+        <button (click)="handleDisplay()">Xem chi tiết</button>
+    </div>
+</ng-template>
+
+<div class="management_payment_details management_service" *ngIf="isDisplay else hidden">
+    <div class="space_between">
+        <h3>2. Dọn dẹp vệ sinh:</h3>
+        <button (click)="handleDisplay()">Ẩn</button>
+    </div>
+
+    <!-- Thời lượng -->
+    <div class="management_service_title space_between">
+        a. Thời lượng:
+        <button class="management_service_add" *ngIf="!isCreateTime else create_time" (click)="handleCreateTime()">
+            Thêm
+        </button>
+        <ng-template #create_time>
+            <div class="center_y">
+                <button class="management_service_cancel" (click)="handleCreateTime()">
+                    Hủy
+                </button>
+                <button class="management_service_add">
+                    Gửi
+                </button>
+            </div>
+        </ng-template>
+    </div>
+
+    <!-- Form thêm duration -->
+    <div class="management_service_time_create" *ngIf="isCreateTime">
+        <div class="center_y">
+            <div class="center_y">
+                <div class="management_service_time_create_content">Số giờ:</div>
+                <input 
+                    [(ngModel)]="contentCreateTime.workingHour"
+                    type="number" placeholder="Nhập số giờ làm..." class="management_service_time_create_content" 
+                />
+            </div>
+            <div class="center_y">
+                <div class="management_service_time_create_content">Giá cả:</div>
+                <input 
+                    [(ngModel)]="contentCreateTime.fee"
+                    type="number" placeholder="Nhập giá cả..." class="management_service_time_create_content"
+                />
+            </div>
+        </div>
+        <div class="management_service_time_create_description">
+            <div class="management_service_time_create_content">Mô tả:</div>
+            <div>
+                <textarea 
+                    [(ngModel)]="contentCreateTime.description"
+                    placeholder="Nhập mô tả..."
+                ></textarea>
+            </div>
+        </div>
+    </div>
+
+    <!-- Các form duration đã có -->
+    <div class="management_service_time">
+        <div class="management_service_form" *ngFor="let duration of cleaningServices?.durations">
+            <div class="management_service_form_info">Thời lượng: {{ duration?.workingHour }}</div>
+            <div class="management_service_form_info">Giá: {{ duration?.fee }} VND</div>
+            <div class="management_service_form_description">
+                {{ duration?.description }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Dịch vụ: Dọn phòng khách -->
+    <div class="management_service_title">
+        b. Dịch vụ:
+    </div>
+
+    <div class="service_cleaning row" *ngFor="let service of cleaningServices?.services">
+        <img [src]="service?.image" alt="Image Service" />
+        <div style="flex: 1">
+            <div class="service_cleaning_name">{{ service?.serviceName }}:</div>
+            <ul>
+                <li *ngFor="let task of service?.tasks">{{ task }}</li>
+            </ul>
+        </div>
+    </div>
+</div>

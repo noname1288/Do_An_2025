@@ -1,0 +1,205 @@
+/* Management Payment  */
+.management_payment_component {
+    text-align: center;
+    margin: 0;
+    padding: 2rem 8rem 4rem 8rem;
+}
+
+.management_payment_component h1 {
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+    color: rgb(255, 130, 40);
+    text-shadow: 2px 5px 5px #d9d9d9;
+}
+
+.management_payment_details {
+    padding: 3rem;
+    padding-top: 2rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, .95);
+}
+
+.management_payment_details h3 {
+    text-align: left;
+    margin-top: 0;
+    color: rgb(247, 116, 23);
+}
+
+/* Chart */
+.chart_component_status {
+    align-items: start;
+    column-gap: 2rem;
+}
+
+.chart_component {
+    flex: 1;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px #cccccc;
+    background-color: #ffffff;
+}
+
+.chart_component_info, .chart_component_info2 {
+    flex: .25;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 10px #d9d9d9;
+    background-color: #ffffff;
+    line-height: 2rem;
+    text-align: left;
+}
+
+.chart_component_info2 {
+    flex: .4;
+}
+
+.chart_component_box {
+    width: .7rem;
+    height: .7rem;
+    margin-right: 1rem;
+}
+
+hr {
+    width: 100%;
+    margin: 3rem 0;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+}
+
+
+/* Search */
+.search_component {
+}
+
+.search_component_title {
+    text-align: left;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.search_main {
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.search_icon {
+    width: 3rem;
+    height: inherit;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid rgba(255, 130, 40, .8);
+}
+
+.search_icon img {
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain;
+}
+
+.search_main input {
+    flex: 1;
+    margin: 0 1rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 130, 40, .8);
+}
+
+.search_main button {
+    flex: .2;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 1rem;
+    background-color: rgba(255, 130, 40, .8);
+}
+
+.search_description {
+    text-align: left;
+    font-style: italic;
+    color: rgb(255, 60, 60);
+    font-size: 13px;
+}
+
+/* filter */
+.filter_component {
+    line-height: 2.2rem;
+    margin: 1.5rem 0 .0rem 0;
+}
+
+.filter_row {
+    text-align: left;
+}
+
+.filter_title {
+    width: 15%;
+    font-weight: 500;
+}
+
+.filter_choose {
+    margin-right: 2rem;
+}
+
+.filter_choose input {
+    width: .8rem;
+    height: .8rem;
+}
+
+.filter_content {
+    margin-left: 2px;
+}
+
+/* table */
+.management_payment_table {
+    max-height: 30rem;
+    overflow-y: auto;
+    margin-top: 2rem;
+}
+
+table {
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse;
+    box-shadow: 5px 5px 5px #d9d9d9;
+    table-layout: fixed;
+    margin: 0;
+}
+
+thead {
+    background-color: rgb(255, 130, 40);
+    position: sticky;
+    top: 0;
+    border-top: 0;
+}
+
+tr, th, td {
+    font-size: 14px;
+    border: 1px solid #ffffff;
+}
+
+tr {
+    height: 2.5rem;
+}
+
+th, td {
+    border: 1px solid #d9d9d9;
+}
+
+th {
+    color: #ffffff;
+    position: relative;
+}
+
+td {
+    height: inherit;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 1rem;
+}
+
+.icon_payment_order {
+    width: .9rem;
+    height: .9rem;
+    object-fit: contain;
+}

@@ -1,0 +1,44 @@
+.home_component {
+    width: inherit;
+    height: 100vh;
+}
+
+.home_main {
+    margin-top: 3rem;
+    column-gap: 5rem;
+}
+
+.home_component h1 {
+    color: rgb(255, 130, 40);
+    text-shadow: 2px 5px 5px #d9d9d9;
+}
+
+.home_form_register {
+    display: block;
+    padding: 1rem 2rem 1.5rem 2rem;
+    border-radius: 1.8rem;
+    background: linear-gradient(to bottom, #FFA869, #FF8F3E);
+}
+
+.home_form_register:hover {
+    box-shadow: 5px 5px 20px #ffffff;
+}
+
+.home_form_title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    margin: .5rem 0 1rem 0;
+}
+
+.home_form_register img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    margin-right: 2rem;
+    border-radius: 1rem;
+}
+
+.home_form_register ul li {
+    margin-bottom: .5rem;
+}

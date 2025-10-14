@@ -1,0 +1,97 @@
+<div class="profile_component">
+    <div class="profile_main">
+        <h2>Thông tin cá nhân</h2>
+        <div class="row">
+            <div class="profile_edit">
+                <img [src]="client?.avatar" alt="Avatar Client" class="profile_avatar" />
+                <button class="profile_change_avatar">Thay đổi ảnh đại diện</button>
+
+                <button class="profile_change_password">Đổi mật khẩu</button>
+            </div>
+            <div class="profile_info">
+                <div class="row">
+                    <div class="profile_info_detail">
+                        <label for="username" class="profile_info_title">Họ và tên:</label> <br/>
+                        <div class="profile_info_form center_y">
+                            <img src="assets/icon_username.png" alt="Icon Username" class="profile_icon" />
+                            <input 
+                                [(ngModel)]="data.username"
+                                type="text"
+                                name="username"
+                                placeholder="{{ client?.username }}"
+                            />
+                            <button class="btn_delete" [class.hidden]="data.username===''" (click)="onDelete('username')">
+                                <img src="assets/icon_delete.png" alt="Icon Delete" class="profile_icon_delete">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="profile_edit_gender">
+                        <label for="gender" class="profile_info_title">Giới tính:</label> <br/>
+                        <div class="profile_choose_gender center_y">
+                            <button class="profile_gender center" [class.active]="data.gender==='Nam'" (click)="onChangeGender('Nam')" >Nam</button>
+                            <button class="profile_gender center" [class.active]="data.gender==='Nữ'" (click)="onChangeGender('Nữ')" >Nữ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile_info_detail">
+                    <label for="dob" class="profile_info_title">Ngày sinh:</label> <br/>
+                    <div class="profile_info_form center_y">
+                        <img src="assets/icon_dob.png" alt="Icon Dob" class="profile_icon" />
+                        <input 
+                            [(ngModel)]="data.dob"
+                            type="date"
+                            name="dob"
+                            class="profile_change_dob"
+                        />
+                    </div>
+                </div>
+
+                <div class="profile_info_detail">
+                    <label for="email" class="profile_info_title">Email:</label> <br/>
+                    <div class="profile_info_form center_y">
+                        <img src="assets/icon_email.png" alt="Icon Email" class="profile_icon" />
+                        <input 
+                            type="text"
+                            name="email"
+                            placeholder="{{ client?.email }}"
+                            disabled
+                        />
+                    </div>
+                </div>
+
+                <div class="profile_info_detail">
+                    <label for="tel" class="profile_info_title">Số điện thoại:</label> <br/>
+                    <div class="profile_info_form center_y">
+                        <img src="assets/icon_tel.png" alt="Icon Tel" class="profile_icon" />
+                        <input 
+                            [(ngModel)]="data.tel"
+                            type="text"
+                            name="tel"
+                            placeholder="{{ client?.tel }}"
+                        />
+                        <button class="btn_delete" [class.hidden]="data.tel===''" (click)="onDelete('tel')">
+                            <img src="assets/icon_delete.png" alt="Icon Delete" class="profile_icon_delete">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="profile_info_detail">
+                    <label for="location" class="profile_info_title">Địa chỉ:</label> <br/>
+                    <div class="profile_info_form center_y">
+                        <img src="assets/icon_location.png" alt="Icon Location" class="profile_icon" />
+                        <input 
+                            [(ngModel)]="data.location"
+                            type="text"
+                            name="location"
+                            placeholder="{{ client?.location }}"
+                        />
+                        <button class="btn_delete" [class.hidden]="data.location===''" (click)="onDelete('location')">
+                            <img src="assets/icon_delete.png" alt="Icon Delete" class="profile_icon_delete">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

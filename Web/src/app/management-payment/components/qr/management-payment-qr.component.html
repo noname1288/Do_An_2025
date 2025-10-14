@@ -1,0 +1,83 @@
+<div class="management_payment_details">
+    <h3>2. Thanh toán hóa đơn:</h3>
+    <div class="search_component">
+        <div class="search_component_title">Tìm kiếm hóa đơn:</div>
+        <div class="search_main ">
+            <div class="search_icon center">
+                <img src="assets/icon_search.png" alt="Icon Search" />
+            </div>
+            <input 
+                type="text" 
+                [(ngModel)]="searchClient"
+                placeholder="Nhập tên người dùng hoặc khách hàng..."
+            >
+            <button type="button" (click)="filterOrder()" >Tìm kiếm</button>
+        </div>
+    </div>
+
+    <p class="search_description">*Tìm kiếm hóa đơn theo tên: Người dùng | Khách hàng</p>
+
+    <div class="filter_component">
+        <div class="filter_row center_y">
+            <div class="filter_title">a. Ngày tạo:</div>
+            <div class="center_y filter_choose">
+                <input type="radio" name="createdAt" (click)="onFilterCreatedAt(true)" [checked]="filterCreatedAt" />
+                <div class="filter_content">Cũ nhất</div>
+            </div>
+            <div class="center_y filter_choose">
+                <input type="radio" name="createdAt" (click)="onFilterCreatedAt(false)" [checked]="!filterCreatedAt" />
+                <div class="filter_content">Mới nhất</div>
+            </div>
+        </div> 
+
+        <div class="filter_row">
+            <div class="filter_title">b. Trạng thái:</div>
+            <div class="center_y">
+                <div class="center_y filter_choose" >
+                    <input type="checkbox" [checked]="isCheckedStatus('All')" (click)="onFilterStatus('All')" />
+                    <div class="filter_content">Tất cả</div>
+                </div>
+                <div class="center_y filter_choose" *ngFor="let status of typeStatus | keyvalue">
+                    <input type="checkbox" [checked]="isCheckedStatus(status.key)" (click)="onFilterStatus(status.key)" />
+                    <div class="filter_content">{{ status.value.name }}</div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="management_payment_table">
+        <table>
+            <colgroup>
+                <col style="width: 6%">         <!--uid-->
+                <col style="width: 10%">        <!--workerName-->
+                <col style="width: 8%">        <!--workerDob-->
+                <col style="width: 10%">        <!--userName-->
+                <col style="width: 6%">         <!--price-->
+                <col style="width: 8%">        <!--createdAt-->
+                <col style="width: 10%">        <!--status-->
+            </colgroup>
+            <thead>
+                <tr>
+                    <th> UID </th>
+                    <th> Nguời làm </th>
+                    <th> Ngày sinh </th>
+                    <th> Khách hàng </th>
+                    <th> Số tiền (VND) </th>
+                    <th> Ngày tạo </th>
+                    <th>  Trạng thái </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of orders; let i = index" [style.backgroundColor]="i%2==1 ? 'rgba(255, 130, 40, .1)' : '#ffffff'" >
+                    <td> {{ order.uid }} </td>
+                    <td> {{ order.worker?.username }} </td>
+                    <td > {{ order.worker?.dob }} </td>
+                    <td> {{ order.user?.username }} </td>
+                    <td> {{ order.price }} </td>
+                    <td> {{ getDate(order.createdAt) }} </td>
+                    <td [style.color]="typeStatus[order.status].color" > {{ typeStatus[order.status].name }} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

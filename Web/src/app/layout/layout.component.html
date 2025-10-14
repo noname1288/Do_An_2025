@@ -1,0 +1,66 @@
+<div class="navBar_component">
+    <nav class="navBar_main">
+        <div class="navBar_title">GoodJob</div>
+        <div class="navBar_username" *ngIf="client; else guest">
+            Xin chào {{ client.username }}
+        </div>
+        <ng-template #guest>
+            <div class="navBar_username">
+                Chưa đăng nhập
+            </div>
+        </ng-template>
+
+        <a [routerLink]="['/goodJob']" >
+            <div class="navBar_navigation center_y" [class.active]="isActive()==='/goodJob'">
+                <img src="assets/register_member.png" alt="Register Member" />
+                <span>Đăng ký thành viên</span>
+            </div>
+        </a>
+        <a >
+            <div class="navBar_navigation center_y">
+                <img src="assets/management_member.png" alt="Management Members" />
+                <span>Quản lý thành viên</span>
+            </div>
+        </a>
+        <a [routerLink]="['/goodJob/managementJob']">
+            <div class="navBar_navigation center_y" [class.active]="isActive()==='/goodJob/managementJob'">
+                <img src="assets/management_job.png" alt="Management Jobs" />
+                <span>Quản lý công việc</span>
+            </div>
+        </a>
+        <a [routerLink]="['/goodJob/managementPayment']">
+            <div class="navBar_navigation center_y" [class.active]="isActive()==='/goodJob/managementPayment'">
+                <img src="assets/management_payment.png" alt="Management Payments" />
+                <span>Quản lý thanh toán</span>
+            </div>
+        </a>
+        <a >
+            <div class="navBar_navigation center_y">
+                <img src="assets/management_complaint.png" alt="Management Complaints" />
+                <span>Quản lý khiếu nại</span>
+            </div>
+        </a>
+        <a [routerLink]="['/goodJob/profile']">
+            <div class="navBar_navigation center_y" [class.active]="isActive()==='/goodJob/profile'">
+                <img src="assets/profile.png" alt="Profile" />
+                <span>Thông tin cá nhân</span>
+            </div>
+        </a>
+
+        <div class="navBar_footer">
+            <button type="button" (click)="onLogout()" >Đăng xuất</button>
+            <div class="center">GoodJob việc làm nhanh - uy tín</div>
+        </div>
+    </nav>
+    <div class="main_content">
+        <router-outlet></router-outlet>
+    </div>
+
+    <div class="errMsg space_between" *ngIf="errMsg!==''">
+        {{ errMsg }}
+
+        <button class="errMsg_hidden center" (click)="hiddenMsg()" >
+            <img src="assets/icon_delete_red.png" alt="">
+        </button>
+    </div>
+</div>

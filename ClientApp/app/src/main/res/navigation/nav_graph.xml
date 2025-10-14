@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cleaning_nav_graph"
+    app:startDestination="@id/selectTimeFragment">
+
+    <fragment
+        android:id="@+id/selectTimeFragment"
+        android:name="com.project.job.ui.service.cleaningservice.SelectTimeFragment"
+        android:label="SelectTimeFragment"
+        tools:layout="@layout/fragment_select_time"
+        android:tag="selectTimeFragment">
+        <argument
+            android:name="totalHours"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <argument
+            android:name="totalFee"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/confirmAndCheckoutFragment"
+        android:name="com.project.job.ui.service.cleaningservice.ConfirmAndCheckoutFragment"
+        android:label="ConfirmAndCheckoutFragment"
+        tools:layout="@layout/fragment_confirm_and_checkout"
+        android:tag="confirmAndCheckoutFragment" />
+</navigation>

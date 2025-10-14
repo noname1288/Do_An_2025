@@ -1,0 +1,190 @@
+{
+    "cleaning": {
+        "services": [
+            {
+                "uid": "6zd6Qf1CGvJj9Uk9uyld",
+                "serviceType": "CLEANING",
+                "serviceName": "Phòng khách",
+                "image": "livingroom.png",
+                "tasks": [
+                    "Quét bụi và lau tất cả các bề mặt",
+                    "Lau công tắc và tay cầm",
+                    "Đổ rác",
+                    "Quét và lau sàn"
+                ]
+            },
+            {
+                "uid": "eRFbD7oHFerOTJ6PqUyi",
+                "serviceType": "CLEANING",
+                "serviceName": "Phòng bếp",
+                "image": "kitchen.png",
+                "tasks": [
+                    "Rửa chén và xếp chén đĩa",
+                    "Lau bụi và lau tất cả các bề mặt",
+                    "Lau mặt ngoài của tủ bếp và thiết bị gia dụng",
+                    "Lau công tắc và tay cầm",
+                    "Cọ rửa bếp và mặt bàn",
+                    "Làm sạch bồn rửa",
+                    "Đổ rác"
+                ]
+            },
+            {
+                "uid": "iSIuMucuar7IYf3i6bGL",
+                "serviceType": "CLEANING",
+                "serviceName": "Phòng tắm",
+                "image": "bathroom.png",
+                "tasks": [
+                    "Lau sạch toilet",
+                    "Lau chùi vòi sen, bồn tắm và bồn rửa mặt",
+                    "Làm sạch bên ngoài tủ, gương và đồ đạc",
+                    "Lau công tắc và tay cầm",
+                    "Sắp xếp ngăn nắp các vật dụng",
+                    "Đổ rác",
+                    "Quét và lau sàn"
+                ]
+            },
+            {
+                "uid": "ovHg7FR6BpHQM9et1xCO",
+                "serviceType": "CLEANING",
+                "serviceName": "Phòng ngủ",
+                "image": "bedroom.png",
+                "tasks": [
+                    "Lau bụi và lau tất cả các bề mặt",
+                    "Lau công tắc vầ tay cầm",
+                    "Lau sạch gương",
+                    "Sắp xếp lại giường cho gọn gàng (có thể thay khăn trải giường mới nếu bạn yêu cầu)",
+                    "Hút bụi và lau sàn"
+                ]
+            }
+        ],
+        "durations": [
+            {
+                "uid": "46dwI8RJVCpOJzZglm9N",
+                "workingHour": 4,
+                "fee": 320000,
+                "description": "Tối đa 105m2 hoặc 4 phòng"
+            },
+            {
+                "uid": "h2fbtVAtaPQSYtIUelnV",
+                "workingHour": 3,
+                "fee": 240000,
+                "description": "Tối đa 85m2 hoặc 3 phòng"
+            },
+            {
+                "uid": "j8HvlY86R2eIV9zgY4VY",
+                "workingHour": 2,
+                "fee": 192000,
+                "description": "Tối đa 55m2 hoặc 2 phòng"
+            }
+        ]
+    },
+
+    "healthcare": {
+        "services": [
+            {
+                "uid": "G6DVsDQXhJlNwZeNTKUr",
+                "image": "children.png",
+                "serviceType": "HEALTHCARE",
+                "serviceName": "Người lớn tuổi",
+                "duties": [
+                    "Nhắc uống thuốc (nếu đến giờ).",
+                    "Chuẩn bị nước hoặc đồ ăn nhẹ phù hợp.",
+                    "Trò chuyện, cùng đi bộ nhẹ trong nhà hoặc ngoài vườn.",
+                    "Hỗ trợ đi lại, tránh vấp ngã."
+                ],
+                "excludedTasks": [
+                    "Để họ đi lại một mình ở nơi nguy hiểm (cầu thang, sân trơn).",
+                    "Bắt tập thể dục quá sức.",
+                    "Bỏ mặc không trò chuyện (dễ buồn, cô đơn)."
+                ]
+            },
+            {
+                "uid": "TfHO43vmooYNP39SqDFZ",
+                "image": "disable.png",
+                "serviceType": "HEALTHCARE",
+                "serviceName": "Người khuyết tật",
+                "duties": [
+                    "Hỗ trợ ăn uống, di chuyển, vệ sinh cá nhân nếu cần.",
+                    "Chuẩn bị môi trường an toàn, dễ tiếp cận (xe lăn, tay vịn).",
+                    "Trò chuyện, chơi trò phù hợp hoặc giúp họ tham gia hoạt động nhẹ.",
+                    "Khuyến khích tự lập ở mức có thể (để họ tự làm một số việc nhỏ)."
+                ],
+                "excludedTasks": [
+                    "Làm thay toàn bộ mọi thứ, khiến họ mất tự tin.",
+                    "Nói chuyện theo kiểu thương hại hoặc coi thường.",
+                    "Để ở nơi nguy hiểm (cầu thang, ổ điện, nước nóng)."
+                ]
+            },
+            {
+                "uid": "vmV59Zx1qmtnhHgTg25b",
+                "image": "senior.png",
+                "serviceType": "HEALTHCARE",
+                "serviceName": "Trẻ em",
+                "duties": [
+                    "Giám sát trẻ ăn nhẹ/uống nước đúng giờ (nếu đến bữa thì cho ăn chính).",
+                    "Hướng dẫn chơi trò chơi an toàn, có tính giáo dục (vẽ, ghép hình, đọc truyện).",
+                    "Kiểm tra và giữ cho trẻ không chạy ra khu vực nguy hiểm.",
+                    "Quan tâm cảm xúc: trò chuyện, khích lệ, ôm ấp khi cần."
+                ],
+                "excludedTasks": [
+                    "Để trẻ chơi một mình mà không giám sát.",
+                    "Cho ăn đồ ngọt, cay, cứng dễ hóc.",
+                    "Cho sử dụng điện thoại, TV quá nhiều."
+                ]
+            }
+        ],
+        "shifts": [
+            {
+                "uid": "96hgqIiL0V6JfLobNIZk",
+                "workingHour": 2,
+                "fee": 216000
+            },
+            {
+                "uid": "A5xcrBqzMFOEY6F0KHJP",
+                "workingHour": 6,
+                "fee": 520000
+            },
+            {
+                "uid": "OHmucFjis8OtV4nKawFJ",
+                "workingHour": 3,
+                "fee": 270000
+            },
+            {
+                "uid": "ujKOGP2hoVsQMxbzxnsf",
+                "workingHour": 5,
+                "fee": 426000
+            },
+            {
+                "uid": "vgraOAFLcpVSzzPmPp8o",
+                "workingHour": 4,
+                "fee": 355000
+            }
+        ]
+    },
+
+    "maintenance": [
+        {
+            "uid": "O45WyERwfZsJxywdbDHR",
+            "image": "https://res.cloudinary.com/dvofgx21o/image/upload/v1759243047/jobs/kgmd6kddybju58buftba.png",
+            "serviceType": "MAINTENANCE",
+            "serviceName": "Máy giặt",
+            "powers": [
+                "7 - 8 kg",
+                "9 - 10.5 kg",
+                "12 - 14 kg"
+            ],
+            "maintenance": "Thay lồng giặt"
+        },
+        {
+            "uid": "Pntsvw5ILpxwdO7e1Gyg",
+            "image": "https://res.cloudinary.com/dvofgx21o/image/upload/v1759243024/jobs/lvgz9ygteny4eryfvrve.png",
+            "serviceType": "MAINTENANCE",
+            "serviceName": "Điều hòa",
+            "powers": [
+                "dưới 2HP",
+                "trên 2HP"
+            ],
+            "maintenance": "Bơm gas"
+        }
+    ]
+}

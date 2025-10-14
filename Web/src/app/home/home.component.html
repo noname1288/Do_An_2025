@@ -1,0 +1,41 @@
+<div class="home_component center">
+    <div style="text-align: center; margin-top: -5rem;">
+        <h1>Đăng ký tài khoản</h1>
+        <div class="center_y home_main">
+            <div>
+                <button class="home_form_register" (click)="onRegister('user')">
+                    <div class="home_form_title">Khách hàng</div>
+                    <div class="row">
+                        <img src="assets/user.jpg" alt="User">
+                        <div style="text-align: left">
+                            Dịch vụ cung cấp:
+                            <ul class="info_job">
+                                <li *ngFor="let category of categories">
+                                    {{ category }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </button>
+                <p>Đăng ký khách hàng</p>
+            </div>
+            <div>
+                <button class="home_form_register" (click)="onRegister('worker')">
+                    <div class="home_form_title">Người làm</div>
+                    <div class="row">
+                        <img src="assets/worker.jpg" alt="User">
+                        <div style="text-align: left">
+                            Chính sách:
+                            <ul class="info_job">
+                                <li *ngFor="let policy of policies">
+                                    {{ policy }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </button>
+                <p>Đăng ký người làm</p>
+            </div>
+        </div>
+    </div>
+</div>

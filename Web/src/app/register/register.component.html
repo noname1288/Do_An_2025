@@ -1,0 +1,50 @@
+<div class="register_component center">
+    <div style="text-align: center; margin-top: -5rem;">
+        <h1>Đăng ký tài khoản: {{ type[role] }}</h1>
+        <form class="register_form center_y">
+            <img [src]="'assets/' + role + '.jpg'" alt="{{ type[role] }}" class="img_role" />
+
+            <div class="register_main">
+                <label for="email">Email:</label> <br/>
+                <div class="register_form_input center_y">
+                    <img src="assets/email.png" />
+                    <input 
+                        [(ngModel)]="data.email"
+                        placeholder="Nhập email..."
+                        name="email"
+                    />
+                </div>
+
+                <label for="password">Mật khẩu:</label> <br/>
+                <div class="register_form_input center_y">
+                    <img src="assets/password.png" />
+                    <input 
+                        [(ngModel)]="data.password"
+                        placeholder="Nhập mật khẩu..."
+                        name="password"
+                    />
+                </div>
+
+                <label for="confirmPassword">Nhập lại mật khẩu:</label> <br/>
+                <div class="register_form_input center_y">
+                    <img src="assets/password.png" />
+                    <input 
+                        [(ngModel)]="data.confirmPassword"
+                        placeholder="Nhập lại mật khẩu..."
+                        name="confirmPassword"
+                    />
+                </div>
+
+                <div class="register_tool center">
+                    <button type="button" *ngIf="role!=='worker'">
+                        <img src="assets/google.png" alt="Icon gmail" />
+                        <span>Google</span>
+                    </button>
+                    <button type="button" (click)="onRegister()" >
+                        Đăng ký
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

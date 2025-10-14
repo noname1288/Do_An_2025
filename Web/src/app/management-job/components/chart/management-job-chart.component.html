@@ -1,0 +1,20 @@
+<div class="management_payment_details">
+    <h3>1. Doanh thu theo tháng:</h3>
+    <div class="chart_component_status space_between">
+        <div class="chart_component">
+            <canvas baseChart
+                [data]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [type]="'line'">
+            </canvas>
+        </div>
+
+        <div class="chart_component_info">
+            <div class="center_y" *ngFor="let labelLine of labelsLine; let i = index">
+                <div class="chart_component_box" [style.backgroundColor]="colorsLine[i]" ></div>
+                <div>{{ labelLine }}</div>
+            </div>
+        </div>
+    </div>
+</div>
